@@ -20,5 +20,8 @@ from app1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('bubun_url/',views.show_message)
+    path('bubun_url/',views.show_message),
+    path('sipun_url/',views.realme),
+    path('aadhar_url/',views.aadhar),
+    path('voterid_url/',views.voterid)
 ]
