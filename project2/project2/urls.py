@@ -1,4 +1,4 @@
-"""project1 URL Configuration
+"""project2 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -15,17 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app1 import views
+from app2 import views
+from django.conf.urls import url
 
-
-atterns = [
-    path('admin/', admin.site.urls),urlp
-    path('bubun_url/',views.show_message),
-    path('sipun_url/',views.realme),
-    path('aadhar_url/',views.aadhar),
-    path('voterid_url/',views.voterid),
-    path('pancard_url/',views.pancard),
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('bank/', views.bank_fun),
+    url(r'^$', views.home),
+    path('blog/', views.blog),
 ]
-from django.contrib import admin
-from django.urls import path
-from app1 import views

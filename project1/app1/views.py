@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpRespons
 
 # Create your views here.
 def show_message(request):
@@ -19,5 +19,10 @@ def aadhar(request):
 def voterid(request):
     return_voterid='welcome to voterid\n*****\n my voterid no 1234'
     return HttpResponse(return_voterid)
+    
+def pancard(request):
+    return_pancard='welcome to pancard'
+    return HttpResponse(return_pancard)
+
 
  
