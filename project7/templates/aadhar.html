@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome to new project html page</title>
+    <h1>welcome to project7</h1>
+</head>
+<body>
+<h2>aadhar details</h2>
+<table align="centre" border="2" width="30%">
+    <tr>
+        <th>aadhar name</th>
+        <th>aadhar num</th>
+    </tr>
+     <tr>
+        <th>{{aadhar_name}}</th>
+        <th>{{aadhar_num}}</th>
+    </tr>
+	    
+</table>
+<br><br>
+	
+	<h2>aadhar details2</h2>
+<table align="centre" border="2" width="30%">
+    <tr>
+        <th>aadhar name</th>
+        <th>aadhar num</th>
+		 <th>pin</th>
+		{% for i in adhar_input %}
+    </tr>
+     <tr>
+        <th>{{i.name}}</th>
+        <th>{{i.num}}</th>
+		<th>{{i.pin}}</th>
+    </tr>
+	    {% endfor %}
+</table>
+
+#Variable always use with {{variable_name}}
+#for loop in HTML
+#{% for item/record in key_data %}
+#{% endfor %}
+
+</body>
+</html>
+
+#new fun
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student project</title>
+
+</head>
+<body>
+<h1>student details</h1>
+<table align="centre" border="2" width="30%">
+    <tr>
+        <th>student name</th>
+         <th>student rollnum</th>
+    </tr>
+    { % for i in student_input % }
+     <tr>
+        <th>{{i.studentname}}</th>
+         <th>{{i.rollnum}}</th>
+		 <th>
+    </tr>
+
+    { % endfor %}
+
+</table>
+
+
+</body>
+</html>
+
+
+
+
+

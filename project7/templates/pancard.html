@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome to pancard</title>
+
+</head>
+<body>
+<h1>pancard details</h1>
+<table align="center" border="3" width="50">
+    <tr>
+        <th>pancard name</th>
+        <th>pancard num</th>
+		<th colspan="3">location</th>
+    </tr>
+	<tr>
+		<th colspan="2"></th>
+		<th>loc1</th>
+		<th>loc2</th>
+		<th>loc3</th>	
+			
+	</tr>
+	 {%for pan in pancard_input%}
+   <tr>  
+    <th style="background-color:black;color:white;">{{pan.pancardname}}</th>
+     <th style="background-color:orange;color:white;">{{pan.pancard_num}}</th>
+	{%for loc in pan.location%}
+	{% if loc == "boudh" %}
+	<th style="background-color:red;color:white;">{{loc}}</th>
+	{% elif loc == "nayagarh" %}
+	<th style="background-color:green;color:white;">{{loc}}</th>
+	{% elif loc == "kandhamal" %}
+	<th style="background-color:blue;color:white;">{{loc}}</th>
+	{% elif loc == "cuttack" %}
+	<th style="background-color:pink;color:white;">{{loc}}</th>
+	
+	
+	{% else %}
+	<th>{{loc}}</th>
+	{% endif %}
+	{% endfor %}	
+   </tr>
+	 {% endfor %}
+
+
+
+
+</table>>
+
+</body>
+</html>

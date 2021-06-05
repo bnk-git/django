@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student project</title>
+
+</head>
+<body>
+<h1>student details</h1>
+<table align="centre" border="5" width="50%">
+        <tr>
+            <th>student id</th>
+            <th>student name</th>
+            <th colspan="5">marks</th>
+        </tr>
+        <tr>
+        <th colspan="2"></th>
+        <th>sub1</th>
+        <th>sub2</th>
+        <th>sub3</th>
+		<th>sub4</th>
+		<th>sub5</th>
+        </tr>
+    {% for i in student_input %}
+     <tr>
+        <th style="background-color:blue;color:white;">{{i.stdname}}</th>
+         <th style="background-color:blue;color:white;">{{i.roll_num}}</th>
+		 {% for subject in i.marks %}
+			{% if subject < 35 %}
+		 <th style="background-color:red;color:white;">{{subject}}</th>
+			{% elif subject == "A" %}
+		 <th style="background-color:yellow;">{{subject}}</th>
+			{% else %}
+		 <th style="background-color:green;color:white;">{{subject}}</th>
+		    {% endif %}
+		 {% endfor %}
+    </tr>
+
+    {% endfor %}
+
+</table>
+</body>
+</html>
