@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome to bank</title>
+</head>
+<body><h1>bank details</h1>
+<table align="center" border="4" width="50%">
+    <tr>
+        <th>bank name</th>
+        <th>acc type</th>
+        <th>ifsc code</th>
+        <th colspan="3">location</th>
+		<th colspan="4">state</th>
+    </tr>
+    <tr>
+		<th colspan="3"></th>
+		<th>loc1</th>
+		<th>loc2</th>
+		<th>loc3</th></tr>
+		<tr>
+		<th colspan="6"></th>
+
+		<th>state1</th>
+		<th>state2</th>
+		<th>state3</th>
+		<th>state4</th>
+		</tr>
+	
+		
+    
+	
+    {%for bank in bank_input%}
+   <tr>
+    <th style="background-color:black;color:white;">{{bank.bankname}}</th>
+     <th style="background-color:orange;color:white;">{{bank.acc_type}}</th>
+     <th style="background-color:brown;color:white;">{{bank.ifsc_code}}</th>
+	{%for loc in bank.location%}
+	{% if loc == "boudh" %}
+	<th style="background-color:red;color:white;">{{loc}}</th>
+	{% elif loc == "nayagarh" %}
+	<th style="background-color:green;color:white;">{{loc}}</th>
+	{% elif loc == "kandhamal" %}
+	<th style="background-color:blue;color:white;">{{loc}}</th>
+	
+	{%else%}
+	<th>{{loc}}</th>	
+	{% endif %}
+	{% endfor %}
+	{%for state in bank.state%}
+	
+	<th>{{state}}
+	
+	</th>
+	
+	
+	
+
+
+
+	{% endfor %}
+	
+	
+	   </tr>
+	 {% endfor %}
+
+
+
+
+</table>>
+
+
+</body>
+</html>
