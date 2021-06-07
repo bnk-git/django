@@ -31,4 +31,27 @@ def pancard(request):
                         {"pancardname":"sipun","pancard_num":"nhj6759","location":['sambalpur','sonepur','angul']},
                         {"pancardname":"kar","pancard_num":"mhju765","location":['khurdha','cuttack','puri']},
                          ]   }
-    return render(request,"pancard.html",pancard_details)                     
+    return render(request,"pancard.html",pancard_details)                  
+#new fun3
+def bank(request):
+    bank_details={"bank_input":
+                        [{"bankname":"sbi","acc_type":"saving","ifsc_code":"sbin0007654","location":['boudh','kandhamal','nayagarh'],"state":['OD','TS','WB','TN']},
+                        {"bankname":"indian","acc_type":"current","ifsc_code":"idib000d039","location":['malakangiri','keonjhar','bargarh'],"state":['OD','TS','WB','TN']},
+                        {"bankname":"axis","acc_type":"current","ifsc_code":"axis00789","location":['sambalpur','sonepur','angul'],"state":['OD','TS','WB','TN']},
+                        {"bankname":"uco","acc_type":"current","ifsc_code":"uco098765","location":['khurdha','cuttack','puri'],"state":['OD','TS','WB','TN']},
+                         ]   }
+    return render(request,"bank.html",bank_details)         
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
