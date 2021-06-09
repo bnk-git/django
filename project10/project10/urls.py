@@ -19,5 +19,6 @@ from app10 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.mobile),
+    path('',views.showindex),
+    path('register/', views.registeruser),
 ]

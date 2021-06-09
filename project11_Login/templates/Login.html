@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+</head>
+<body>
+<form method="post" action="/logincheck/">
+    {% csrf_token %}
+    <table align="center" border="2" width="20%">
+        <tr>
+            <th colspan="2">welcome to the card details</th>
+        </tr>
+
+        <tr>
+            <td>card name</td>
+            <td><input type="text" placeholder="card name" required name="t1"></td>
+        </tr>
+
+         <tr>
+            <td>password</td>
+            <td><input type="text" placeholder="password" required name="t2"></td>
+        </tr>
+
+        <tr>
+            <th colspan="2"><button type="submit">login</button></th>
+        </tr>
+    </table>
+</form>>
+</body>
+</html>
